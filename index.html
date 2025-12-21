@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Cascadia+Code:ital,wght@0,200..700;1,200..700&family=Fira+Code:wght@300..700&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Score Golf</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="min-h-screen flex items-center justify-center p-4"
+    style="
+      background-image: url('./public/imagenes/background.jpg');
+      background-size: cover;
+      background-position: center;
+    "
+  >
+    <div class="w-full max-w-md space-y-6">
+      <div class="grid grid-cols-1 gap-6">
+        <div
+          class="flex flex-col items-center shadow-lg shadow-black/50 w-full"
+        >
+          <div class="relative w-full">
+            <img
+              class="rounded rounded-t-lg"
+              src="./public/imagenes/background2.jpg"
+              alt="background"
+            />
+
+            <div
+              class="absolute inset-0 flex flex-col items-center justify-center"
+            >
+              <div>
+                <img
+                  class="inline-block h-16 w-16 rounded-full"
+                  src="./public/imagenes/personaje1.png"
+                  alt="avatar"
+                />
+                <h2 class="font-['Cascadia_Code'] font-medium text-center">
+                  Stwart
+                </h2>
+              </div>
+              <h1 class="font-['Cascadia_Code'] mb-8">Golf para Minion´s</h1>
+            </div>
+          </div>
+          <div
+            class="bg-white font-['Cascadia_Code'] flex items-center justify-around gap-4 p-4 rounded-b-lg w-full"
+          >
+            <div class="flex gap-4">
+              <div class="flex flex-col">
+                <label for="par" class="font-medium">Par</label>
+                <input
+                  type="number"
+                  id="par"
+                  class="border border-gray-400 rounded-md p-2 w-12"
+                />
+              </div>
+
+              <div class="flex flex-col">
+                <label for="strokes" class="font-medium">Strokes</label>
+                <input
+                  type="number"
+                  id="strokes"
+                  class="border border-gray-400 rounded-md p-2 w-12"
+                />
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <button
+                onclick="mostrarResultado()"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md p-2 lg:w-full"
+              >
+                🏌️‍♂️ Calcular Puntaje
+              </button>
+            </div>
+
+            <div class="flex flex-col">
+              <div class="relative">
+                <img
+                  src="./public/imagenes/backgroundVertical.jpg"
+                  alt=" background-vertical"
+                />
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center text-center"
+                >
+                  <div id="resultado-emoji" class="text-5xl mb-2">🏌️‍♂️</div>
+                  <div class="font-medium text-lg" id="resultado-nombre">
+                    Result:
+                  </div>
+                  <div class="mt-2">
+                    <span class="font-medium">Score:</span>
+                    <span id="resultado-score">-</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./scoreGolf.js"></script>
+  </body>
+</html>
